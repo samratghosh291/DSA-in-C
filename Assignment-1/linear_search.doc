@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 WAP to perform linear search
 
 ALGORITHM:
@@ -18,3 +19,25 @@ ALGORITHM:
  else
     print->item not found.
 10.stop.                   
+=======
+WAP to perform linear search
+
+ALGORITHM:
+
+1.Start 
+2.print->Enter the limit.
+3.read n.
+4.repeat steps (a)
+    a.Read arr[i]
+5.f=0
+6.print->Enter the item to be selected
+7.read item
+8.repeat steps (a) for i=0 to(n-1)
+    a.if (arr[i]==item)
+        f=1;
+9.if (f==1) then
+    print->item found.
+ else
+    print->item not found.
+10.stop.                   
+>>>>>>> 3b78eaf243d90bac852fabb3e2544c3fb49adc7a
