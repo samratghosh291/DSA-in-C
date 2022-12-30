@@ -1,0 +1,24 @@
+WAP to perform binary search in sorted array.
+
+ALGORITHM:
+
+1.Start
+2.print->Enter the limit.
+3.Read n.
+4.repeat steps (a) for i=0 to i=(n-1)
+    a.read arr[n].
+5.st=0 & end=(n-1)
+6.mid=(st+end)/2;
+7.repeat steps (a,b) while(st<=end)
+    a.if(arr[mid]==item)
+        print->item present.
+        go to step 9.
+
+      if(arr[mid]<item)
+        st=mid+1;
+      if(arr[mid]>item)
+        end=mid-1;
+    b. mid=(st+end)/2;
+8.if(st>end)
+    print->item absent.
+9.stop.                
