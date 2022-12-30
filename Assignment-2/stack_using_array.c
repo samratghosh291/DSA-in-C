@@ -3,10 +3,7 @@
 int n,top=-1,ch,st[100],x,i;
 void push(void);
 void pop(void);
-void dispaly(void);
-
-
-//
+void display(void);
 
 int main(){
     printf("Enter the size of the array: ");
@@ -31,13 +28,13 @@ int main(){
             break;
         }
         case 4:{
-            printf("EXIT!");
+            printf("EXIT!\n");
             break;
         }
             
         
         default:{
-            printf("Enter the valid choice: ");
+            printf("Wrong choice!\n");
         }
     
         }
@@ -46,4 +43,41 @@ int main(){
         return 0;
     }
     return 0;
+}
+
+void push(){
+    if(top>=n-1){
+        printf("\n Stack is overflow.\n");
+    }
+    else{
+        printf("Enter a value to be pushed: ");
+        scanf("%d",&x);
+        top++;
+        st[top]=x;
+
+    }
+}
+
+
+void pop(){
+    if(top<=-1){
+        printf("\nStack is underflow.\n");
+    }
+    else{
+        printf("\nThe popped item element is: %d\n",st[top]);
+        top--;
+    }
+}
+
+void display(){
+    if(top>=0){
+        printf("\nThe elements in stack: ");
+        for(int i=top;i>=0;i--){
+            printf("\n%d ",st[i]);
+        }
+        printf("\n");
+    }
+    else{
+        printf("\nThe stack is empty!\n");
+    }
 }
