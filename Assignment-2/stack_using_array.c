@@ -1,10 +1,9 @@
 #include<stdio.h>
 
-int n,top=-1,ch;
-
-
-
-
+int n,top=-1,ch,st[100],x,i;
+void push(void);
+void pop(void);
+void dispaly(void);
 
 
 //
@@ -12,7 +11,6 @@ int n,top=-1,ch;
 int main(){
     printf("Enter the size of the array: ");
     scanf("%d",&n);
-    int arr[n];
     printf("\n\t Stack operation using array");
     printf("\n1.PUSH\n2.POP\n3.DISPLAY\nExit!");
     do{
