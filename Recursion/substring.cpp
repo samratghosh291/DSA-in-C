@@ -1,5 +1,18 @@
+// Generate all substring
+// i/p: "ABC"
+// C
+// B
+// BC
+// A
+// AC
+// AB
+// ABC
+
+
 #include <bits/stdc++.h>
 using namespace std;
+
+void subseq(string,string);
 
 void subseq(string s, string ans)
 {
@@ -9,7 +22,7 @@ void subseq(string s, string ans)
         cout << ans << endl;
         return;
     }
-
+ 
     char ch = s[0];
     string ros = s.substr(1);
 
@@ -29,3 +42,5 @@ int main()
 
     return 0;
 }
+
+
