@@ -8,12 +8,19 @@ class Student{           // The class
     int roll;
     char sec;
 
-    Student(string nm,int rl,char sect){    // Constructor with parameters
+    // Constructor declaration
+    Student(string nm,int rl,char sect);
+
+};
+
+    // Constructor definition outside the class
+    Student::Student(string nm,int rl,char sect){    // Constructor with parameters
         name=nm;
         roll=rl;
         sec=sect;
     }
-};
+
+
 
 
 
