@@ -56,6 +56,7 @@ void knapsack(ks arr[], int n, float bag_cap){
 }
 
 
+// printf("hello");
 
 
 
