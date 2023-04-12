@@ -10,15 +10,12 @@ void reverseArr(int arr[],int st,int end){
 }
 
 
-
-
 void rightRotate(int arr[], int k, int n){
     k=k%n;
     reverseArr(arr,0,n-1);
     reverseArr(arr,0,k-1);
     reverseArr(arr,k,n-1);
 }
-
 
 
 void printArr(int arr[], int n){
