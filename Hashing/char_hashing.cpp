@@ -8,13 +8,14 @@ int main() {
     cin>>str;
 
 
-    //storing data
+    //pre-computing data
       int hash_arr[26]={0};
     for (int i = 0; i < str.size(); i++) {
         hash_arr[str[i]-'a']++;
     }
 
 
+    // fetching data 
    int quries_no;
    cout<<"No. of Quories: ";
    cin>>quries_no;
