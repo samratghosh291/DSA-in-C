@@ -9,19 +9,18 @@ int main(){
     cout<<"Enter size of array: ";
     cin>>size;
     int arr[size];
-    for(int i=0;i<size;i++){
-        cin>>arr[i];
-    }
+
     // declear map 
     map<int,int>mpp; //map store data in soring order of their key value
 
-    //pre-computing
     for(int i=0;i<size;i++){
+        cin>>arr[i];
+
+        //pre-computing
         mpp[arr[i]]++;
     }
-    
 
-    //display data
+    //iterate the hash map
     for(auto it:mpp){
         cout<<it.first<<" -> "<<it.second<<endl;
     }
@@ -35,7 +34,6 @@ int main(){
         cout<<"Quries: ";
         cin>>quries;
         cout<<mpp[quries]<<endl;
-
     }
 
     return 0;
