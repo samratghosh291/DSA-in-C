@@ -60,7 +60,7 @@ int main(){
 
     convertPrefixSumCloumnWise(arr);
 
-    
+
     print(arr);
 
 
