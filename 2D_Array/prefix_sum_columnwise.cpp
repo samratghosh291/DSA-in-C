@@ -18,25 +18,25 @@ void print(vector<vector<int>>&v){
 }
 
 
-void convertPrefixSum(vector<vector<int>>&v){
-    for(int i=0;i<v.size();i++){
-        for(int j=1;j<v[i].size();j++){
-            v[i][j]=v[i][j-1]+v[i][j];
+// void convertPrefixSum(vector<vector<int>>&v){
+//     for(int i=0;i<v.size();i++){
+//         for(int j=1;j<v[i].size();j++){
+//             v[i][j]=v[i][j-1]+v[i][j];
+//         }
+//     }
+// }
+
+
+
+void convertPrefixSumCloumnWise(vector<vector<int>>&v){
+    for(int j=0;j<v[0].size();j++){
+
+        for(int i=1;i<v.size();i++){
+            v[j][i]=v[j][i]+v[j][i-1];
         }
+
     }
-}
 
-
-int getSum(vector<vector<int>>&v,int r1,int c1,int r2,int c2){
-
-    int sum=0;
-    for(int i=r1;i<=r2;i++){
-        if(c1!=0){
-        sum+=v[i][c2]-v[i][c1-1];
-        }
-        sum+=v[i][c2];
-    }
-    return sum;
 }
 
 
@@ -58,22 +58,11 @@ int main(){
 
     print(arr);
 
-
-    convertPrefixSum(arr);
+    convertPrefixSumCloumnWise(arr);
 
     
     print(arr);
 
 
-    int l1,r1,l2,r2;
-
-    cout<<"Enter the co-ordinate: ";
-    cin>>l1>>r1>>l2>>r2;
-
-    
-     cout<<"The sum will be: "<<getSum(arr,l1,r1,l2,r2);
-
-
-    
     return 0;
 }
