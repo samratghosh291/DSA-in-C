@@ -21,11 +21,13 @@ void insertAtHead(Node*& head, int d) {
     head = temp;
 }
 
+
+
 void insertAtLast(Node*& head, int data) {
     Node* temp = new Node(data);
 
     if (head == nullptr) {
-        // If the list is empty, set head to the new node
+      
         head = temp;
         return;
     }
@@ -37,6 +39,30 @@ void insertAtLast(Node*& head, int data) {
 
     tail->next = temp;
 }
+
+
+void insertAtAnyPosition(Node *head,int position, int value){
+
+    if(position<1){
+        cout<<"invalid position!";
+        return;
+    }
+    else{
+
+        Node *new_node=new Node(value);
+        Node *curr=head;
+        int count=1;
+        while(count<position-1){
+            curr=curr->next;
+            count++;
+        }
+        new_node->next=curr->next;
+        curr->next=new_node;
+
+    }
+}
+
+
 
 void traverseList(Node* head) {
     Node* temp = head;
@@ -50,6 +76,8 @@ void traverseList(Node* head) {
     cout << "->NULL" << endl;
 }
 
+
+
 int main() {
     Node* node1 = nullptr;
     insertAtHead(node1, 20);
@@ -61,6 +89,8 @@ int main() {
     insertAtLast(node1, 100);
     insertAtLast(node1, 200);
 
+    traverseList(node1);
+    insertAtAnyPosition(node1,2,500);
     traverseList(node1);
 
     return 0;
