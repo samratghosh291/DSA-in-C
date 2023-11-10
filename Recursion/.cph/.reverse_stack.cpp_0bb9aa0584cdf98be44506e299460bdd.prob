@@ -1,0 +1,1 @@
+{"name":"Local: reverse_stack","url":"c:\\Users\\HP\\OneDrive\\Desktop\\DSA-in-C-CPP-Python\\Recursion\\reverse_stack.cpp","tests":[{"id":1698507837790,"input":"3\n4 5 7","output":"7 5 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Desktop\\DSA-in-C-CPP-Python\\Recursion\\reverse_stack.cpp","group":"local","local":true}
